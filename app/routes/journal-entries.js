@@ -15,7 +15,8 @@ export default Ember.Route.extend({
     const journalEntries = [
       {title: 'Journal Entry #1', date: '21 September 2017', text: loremIpsum},
       {title: 'Journal Entry #2', date: '22 September 2017', text: loremIpsum},
-      {title: 'Journal Entry #3', date: '23 September 2017', text: loremIpsum}
+      {title: 'Journal Entry #3', date: '22 September 2017', text: loremIpsum},
+      {title: 'Journal Entry #4', date: '23 September 2017', text: loremIpsum}
     ];
 
     sortJournalEntries(journalEntries);
@@ -25,7 +26,7 @@ export default Ember.Route.extend({
 });
 
 function sortJournalEntries(journalEntries) {
-  journalEntries.sort((a, b) => {
+  journalEntries.reverse().sort((a, b) => {
     return new Date(b.date) - new Date(a.date);
   });
 }
