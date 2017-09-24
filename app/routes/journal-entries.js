@@ -12,7 +12,7 @@ const loremIpsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, ' +
 
 export default Ember.Route.extend({
   model() {
-    if (!localStorage.getItem('journalEntries')) {
+    if (!localStorageIsInitialized()) {
       const journalEntries = [
         {title: 'Journal Entry #1', date: '21 September 2017', text: loremIpsum},
         {title: 'Journal Entry #2', date: '22 September 2017', text: loremIpsum},
@@ -26,3 +26,7 @@ export default Ember.Route.extend({
     return JSON.parse(localStorage.getItem('journalEntries'));
   }
 });
+
+function localStorageIsInitialized() {
+  return localStorage.getItem('journalEntries');
+}
