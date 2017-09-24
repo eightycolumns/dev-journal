@@ -12,10 +12,16 @@ const loremIpsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, ' +
 
 export default Ember.Route.extend({
   model() {
-    return [
+    const journalEntries = [
       {title: 'Journal Entry #1', date: '21 September 2017', text: loremIpsum},
       {title: 'Journal Entry #2', date: '22 September 2017', text: loremIpsum},
       {title: 'Journal Entry #3', date: '23 September 2017', text: loremIpsum}
     ];
+
+    journalEntries.sort((a, b) => {
+      return new Date(b.date) - new Date(a.date);
+    });
+
+    return journalEntries;
   }
 });
