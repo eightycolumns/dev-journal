@@ -12,6 +12,34 @@ test('it has a title field', function (assert) {
   assert.equal(titleField.value, 'Journal Entry Title');
 });
 
+test('its date-picker defaults to the current date', function (assert) {
+  this.render(hbs`{{new-journal-entry-form}}`);
+  const datePicker = document.querySelector('#date');
+
+  const currentDate = new Date();
+
+  const months = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December'
+  ];
+
+  const day = currentDate.getDate();
+  const month = months[currentDate.getMonth()];
+  const year = currentDate.getFullYear();
+
+  assert.equal(datePicker.value, `${day} ${month} ${year}`);
+});
+
 test('it has a text field', function (assert) {
   this.render(hbs`{{new-journal-entry-form}}`);
   document.querySelector('#text').value = 'Journal entry text...';

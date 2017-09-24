@@ -2,6 +2,15 @@
   <label for='title'>Title</label>
   {{input id='title' name='title' value=title required='required'}}
 
+  <label for='date'>Date:</label>
+  {{pikaday-input
+    id='date'
+    name='date'
+    value=date
+    format='DD MMMM YYYY'
+    required='required'
+  }}
+
   <label for='text'>Text</label>
   {{textarea id='text' name='text' value=text required='required'}}
 
