@@ -1,4 +1,4 @@
-<form id='new-journal-entry'>
+<form id='new-journal-entry' {{action 'publish' title date text on='submit'}}>
   <label for='title'>Title</label>
   {{input id='title' name='title' value=title required='required'}}
 
