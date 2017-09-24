@@ -19,14 +19,6 @@ export default Ember.Route.extend({
       {title: 'Journal Entry #4', date: '23 September 2017', text: loremIpsum}
     ];
 
-    sortJournalEntries(journalEntries);
-
     return journalEntries;
   }
 });
-
-function sortJournalEntries(journalEntries) {
-  journalEntries.reverse().sort((a, b) => {
-    return new Date(b.date) - new Date(a.date);
-  });
-}

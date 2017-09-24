@@ -1,6 +1,6 @@
 <h1>Journal Entries</h1>
 
-{{#each model as |journal-entry|}}
+{{#each (sort-journal-entries model) as |journal-entry|}}
   <section class='journal-entry'>
     <h2>{{journal-entry.title}}</h2>
     <p class='date'>{{journal-entry.date}}</p>
