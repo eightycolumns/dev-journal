@@ -43,3 +43,11 @@ test('it renders the text correctly', function (assert) {
   assert.ok(header);
   assert.equal(header.textContent, 'Journal entry text...');
 });
+
+test('it has a "Delete" button', function (assert) {
+  this.set('journalEntry', journalEntry);
+  this.render(hbs`{{journal-entry journal-entry=journalEntry}}`);
+  const button = document.querySelector('.journal-entry button');
+  assert.ok(button);
+  assert.equal(button.textContent, 'Delete');
+});
