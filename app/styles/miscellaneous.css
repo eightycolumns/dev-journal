@@ -1,0 +1,20 @@
+body {
+  overflow-y: scroll;
+}
+
+button:focus, button:hover, button:active {
+  opacity: 0.5;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input, textarea {
+  box-shadow: none;
+}
+
+input:focus, textarea:focus, button:focus, button:hover, button:active {
+  outline: none;
+}
