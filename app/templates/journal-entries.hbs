@@ -1,10 +1,5 @@
 <h2>Journal Entries</h2>
 
 {{#each (sort-journal-entries model) as |journal-entry|}}
-  <section class='journal-entry'>
-    <h3>{{journal-entry.title}}</h3>
-    <p class='date'>{{format-date-string journal-entry.date}}</p>
-    <p class='mood'>Mood: {{journal-entry.mood}}</p>
-    <p class='text'>{{journal-entry.text}}</p>
-  </section>
+  {{journal-entry journal-entry=journal-entry}}
 {{/each}}
