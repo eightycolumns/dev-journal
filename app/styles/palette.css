@@ -3,6 +3,10 @@ body {
   color: #333;
 }
 
+a {
+  color: inherit;
+}
+
 header, .journal-entry, form, footer {
   background-color: #fff;
   border: 1px solid #333;

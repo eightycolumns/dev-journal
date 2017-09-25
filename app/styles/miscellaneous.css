@@ -2,6 +2,11 @@ body {
   overflow-y: scroll;
 }
 
+a {
+  outline: none;
+  text-decoration: none;
+}
+
 button:focus, button:hover, button:active {
   opacity: 0.5;
 }
