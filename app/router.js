@@ -9,6 +9,7 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('journal-entries');
   this.route('new-journal-entry');
+  this.route('not-found', {path: '/*path'});
 });
 
 export default Router;

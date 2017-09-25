@@ -20,7 +20,7 @@ test('it allows the user to create a new journal entry', assert => {
   click('.publish');
 
   andThen(() => {
-    const titleField = document.querySelector('.journal-entry h3');
+    const titleField = document.querySelector('.journal-entry h2');
     assert.strictEqual(titleField.textContent, 'Journal Entry Title');
 
     const textField = document.querySelector('.journal-entry .text');

@@ -7,7 +7,7 @@ a {
   color: inherit;
 }
 
-header, .journal-entry, form, footer {
+header, .journal-entry, form, #not-found, footer {
   background-color: #fff;
   border: 1px solid #333;
   border-radius: 8px;
