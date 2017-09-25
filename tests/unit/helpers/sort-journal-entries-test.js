@@ -5,6 +5,7 @@ module('Unit | Helper | sort journal entries');
 
 test('it sorts journal entries in reverse chronological order', assert => {
   assert.expect(1);
+
   const journalEntries = [
     {title: 'Journal Entry #1', date: '21 September 2017'},
     {title: 'Journal Entry #2', date: '22 September 2017'},

@@ -1,9 +1,6 @@
 import { moduleFor, test } from 'ember-qunit';
 
-moduleFor('route:journal-entries', 'Unit | Route | journal entries', {
-  // Specify the other units that are required for this test.
-  // needs: ['controller:foo']
-});
+moduleFor('route:journal-entries', 'Unit | Route | journal entries', {});
 
 test('it exists', function (assert) {
   assert.expect(1);
