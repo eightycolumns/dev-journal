@@ -6,6 +6,7 @@ export default Ember.Route.extend({
       const journalEntries = JSON.parse(localStorage.getItem('journalEntries'));
 
       const newJournalEntry = {
+        id: generateId(),
         title: title,
         date: date,
         mood: mood,
@@ -20,3 +21,7 @@ export default Ember.Route.extend({
     }
   }
 });
+
+function generateId() {
+  return Math.random().toString(36).substr(2, 16);
+}

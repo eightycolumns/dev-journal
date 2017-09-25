@@ -1,6 +1,20 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  actions: {
+    delete(journalEntryToDelete) {
+      let journalEntries = JSON.parse(localStorage.getItem('journalEntries'));
+
+      journalEntries = journalEntries.filter(
+        journalEntry => journalEntry.id !== journalEntryToDelete.id
+      );
+
+      localStorage.setItem('journalEntries', JSON.stringify(journalEntries));
+
+      this.refresh();
+    }
+  },
+
   model() {
     if (!localStorageIsInitialized()) {
       initializeLocalStorage();
@@ -27,24 +41,28 @@ function initializeLocalStorage() {
 
   const journalEntries = [
     {
+      id: 1,
       title: 'Journal Entry #1',
       date: '21 September 2017',
       mood: 'Happy!',
       text: loremIpsum
     },
     {
+      id: 2,
       title: 'Journal Entry #2',
       date: '22 September 2017',
       mood: 'Happy!',
       text: loremIpsum
     },
     {
+      id: 3,
       title: 'Journal Entry #3',
       date: '22 September 2017',
       mood: 'Happy!',
       text: loremIpsum
     },
     {
+      id: 4,
       title: 'Journal Entry #4',
       date: '23 September 2017',
       mood: 'Happy!',
