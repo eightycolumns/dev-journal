@@ -63,6 +63,6 @@ test('it has a text field', function (assert) {
 
 test('it has a "Publish" button', function (assert) {
   this.render(hbs`{{new-journal-entry-form}}`);
-  const button = document.querySelector('#new-journal-entry button');
+  const button = document.querySelector('.publish');
   assert.equal(button.textContent, 'Publish');
 });

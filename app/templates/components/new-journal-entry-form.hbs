@@ -1,52 +1,64 @@
-<form id='new-journal-entry' {{action 'publish' title date mood text on='submit'}}>
-  <label for='title'>Title</label>
-  {{input id='title' name='title' value=title required='required'}}
+<form {{action 'publish' title date mood text on='submit'}}>
+  <h2>New Journal Entry</h2>
 
-  <label for='date'>Date:</label>
-  {{pikaday-input
-    id='date'
-    name='date'
-    value=date
-    format='DD MMMM YYYY'
-    required='required'
-    onSelection=(action 'setDate')
-  }}
+  <div class='field'>
+    <label for='title'>Title:</label>
+    {{input id='title' name='title' value=title required='required'}}
+  </div>
 
-  {{#radio-button
-    radioId='happy'
-    radioClass='mood'
-    groupValue=mood
-    value='Happy!'
-    changed='setMood'
-    required='required'
-   }}
-    Happy!
-  {{/radio-button}}
+  <div class='field'>
+    <label for='date'>Date:</label>
+    {{pikaday-input
+      id='date'
+      name='date'
+      value=date
+      format='DD MMMM YYYY'
+      required='required'
+      onSelection=(action 'setDate')
+    }}
+  </div>
 
-  {{#radio-button
-    radioId='meh'
-    radioClass='mood'
-    groupValue=mood
-    value='Meh...'
-    changed='setMood'
-    required='required'
-   }}
-    Meh...
-  {{/radio-button}}
+  <div class='field'>
+    <label for='mood'>Mood:</label>
 
-  {{#radio-button
-    radioId='sad'
-    radioClass='mood'
-    groupValue=mood
-    value='Sad...'
-    changed='setMood'
-    required='required'
-   }}
-    Sad...
-  {{/radio-button}}
+    {{#radio-button
+      radioId='happy'
+      radioClass='mood'
+      groupValue=mood
+      value='Happy!'
+      changed='setMood'
+      required='required'
+     }}
+      Happy!
+    {{/radio-button}}
 
-  <label for='text'>Text</label>
-  {{textarea id='text' name='text' value=text required='required'}}
+    {{#radio-button
+      radioId='meh'
+      radioClass='mood'
+      groupValue=mood
+      value='Meh...'
+      changed='setMood'
+      required='required'
+     }}
+      Meh...
+    {{/radio-button}}
 
-  <button>Publish</button>
+    {{#radio-button
+      radioId='sad'
+      radioClass='mood'
+      groupValue=mood
+      value='Sad...'
+      changed='setMood'
+      required='required'
+     }}
+      Sad...
+    {{/radio-button}}
+  </div>
+
+  <div class='field'>
+    <label for='text'>Text:</label>
+    {{textarea id='text' name='text' value=text required='required'}}
+  </div>
+
+  <button class='publish'>Publish</button>
 </form>
