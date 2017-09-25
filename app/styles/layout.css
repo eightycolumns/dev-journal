@@ -1,0 +1,49 @@
+#application {
+  width: 720px;
+  margin: 0 auto;
+}
+
+header, .journal-entry, form {
+  margin-top: 24px;
+  padding: 48px;
+}
+
+footer {
+  margin: 24px 0;
+  padding: 24px 48px;
+}
+
+.date, .mood, .text {
+  margin-top: 16px;
+}
+
+button {
+  margin-top: 24px;
+  padding: 8px 24px;
+}
+
+.field {
+  margin-top: 16px;
+}
+
+label[for='title'], label[for='date'], label[for='text'] {
+  display: block;
+}
+
+input[type='text'], textarea {
+  margin-top: 4px;
+  padding: 4px;
+}
+
+input[type=text] {
+  width: 360px;
+}
+
+input[type=radio] {
+  margin-left: 8px;
+}
+
+textarea {
+  height: 180px;
+  width: 100%;
+}
