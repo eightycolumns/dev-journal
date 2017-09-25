@@ -17,7 +17,7 @@ test('it renders the header correctly', function (assert) {
   this.render(hbs`{{journal-entry journal-entry=journalEntry}}`);
   const header = document.querySelector('.journal-entry h3');
   assert.ok(header);
-  assert.equal(header.textContent, 'Journal Entry Title');
+  assert.strictEqual(header.textContent, 'Journal Entry Title');
 });
 
 test('it renders the date correctly', function (assert) {
@@ -25,7 +25,7 @@ test('it renders the date correctly', function (assert) {
   this.render(hbs`{{journal-entry journal-entry=journalEntry}}`);
   const header = document.querySelector('.journal-entry .date');
   assert.ok(header);
-  assert.equal(header.textContent, '22 September 2017');
+  assert.strictEqual(header.textContent, '22 September 2017');
 });
 
 test('it renders the mood correctly', function (assert) {
@@ -33,7 +33,7 @@ test('it renders the mood correctly', function (assert) {
   this.render(hbs`{{journal-entry journal-entry=journalEntry}}`);
   const header = document.querySelector('.journal-entry .mood');
   assert.ok(header);
-  assert.equal(header.textContent, 'Mood: Happy!');
+  assert.strictEqual(header.textContent, 'Mood: Happy!');
 });
 
 test('it renders the text correctly', function (assert) {
@@ -41,7 +41,7 @@ test('it renders the text correctly', function (assert) {
   this.render(hbs`{{journal-entry journal-entry=journalEntry}}`);
   const header = document.querySelector('.journal-entry .text');
   assert.ok(header);
-  assert.equal(header.textContent, 'Journal entry text...');
+  assert.strictEqual(header.textContent, 'Journal entry text...');
 });
 
 test('it has a "Delete" button', function (assert) {
@@ -49,5 +49,5 @@ test('it has a "Delete" button', function (assert) {
   this.render(hbs`{{journal-entry journal-entry=journalEntry}}`);
   const button = document.querySelector('.journal-entry button');
   assert.ok(button);
-  assert.equal(button.textContent, 'Delete');
+  assert.strictEqual(button.textContent, 'Delete');
 });

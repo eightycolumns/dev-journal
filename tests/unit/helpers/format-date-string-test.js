@@ -5,5 +5,5 @@ module('Unit | Helper | format date string');
 
 test('it formats a date string for display', assert => {
   const dateString = '2017-09-22T04:00:00.000Z';
-  assert.equal(formatDateString([dateString]), '22 September 2017');
+  assert.strictEqual(formatDateString([dateString]), '22 September 2017');
 });

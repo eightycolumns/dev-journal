@@ -6,7 +6,7 @@ moduleForAcceptance('Acceptance | new journal entry');
 test('it is accessible via /new-journal-entry', assert => {
   assert.expect(1);
   visit('/new-journal-entry');
-  andThen(() => assert.equal(currentURL(), '/new-journal-entry'));
+  andThen(() => assert.strictEqual(currentURL(), '/new-journal-entry'));
 });
 
 test('it allows the user to create a new journal entry', assert => {
@@ -21,9 +21,9 @@ test('it allows the user to create a new journal entry', assert => {
 
   andThen(() => {
     const titleField = document.querySelector('.journal-entry h3');
-    assert.equal(titleField.textContent, 'Journal Entry Title');
+    assert.strictEqual(titleField.textContent, 'Journal Entry Title');
 
     const textField = document.querySelector('.journal-entry .text');
-    assert.equal(textField.textContent, 'Journal entry...');
+    assert.strictEqual(textField.textContent, 'Journal entry...');
   });
 });

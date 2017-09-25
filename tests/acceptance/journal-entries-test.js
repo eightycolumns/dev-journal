@@ -6,13 +6,13 @@ moduleForAcceptance('Acceptance | journal entries');
 test('it is accessible via /journal-entries', assert => {
   assert.expect(1);
   visit('/journal-entries');
-  andThen(() => assert.equal(currentURL(), '/journal-entries'));
+  andThen(() => assert.strictEqual(currentURL(), '/journal-entries'));
 });
 
 test('it is accessible via /', assert => {
   assert.expect(1);
   visit('/');
-  andThen(() => assert.equal(currentURL(), '/journal-entries'));
+  andThen(() => assert.strictEqual(currentURL(), '/journal-entries'));
 });
 
 test('it allows the user to delete a journal entry', assert => {
@@ -36,9 +36,9 @@ test('it allows the user to delete a journal entry', assert => {
 
   andThen(() => {
     const titleField = document.querySelector('.journal-entry h3');
-    assert.equal(titleField.textContent, 'Journal Entry Title');
+    assert.strictEqual(titleField.textContent, 'Journal Entry Title');
 
     const textField = document.querySelector('.journal-entry .text');
-    assert.equal(textField.textContent, 'Journal entry...');
+    assert.strictEqual(textField.textContent, 'Journal entry...');
   });
 });

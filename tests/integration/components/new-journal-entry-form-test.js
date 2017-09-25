@@ -36,7 +36,7 @@ test('its date-picker defaults to the current date', function (assert) {
   const month = months[currentDate.getMonth()];
   const year = currentDate.getFullYear();
 
-  assert.equal(datePicker.value, `${day} ${month} ${year}`);
+  assert.strictEqual(datePicker.value, `${day} ${month} ${year}`);
 });
 
 test('its mood-picker defaults to "Happy!"', function (assert) {
@@ -64,5 +64,5 @@ test('it has a text field', function (assert) {
 test('it has a "Publish" button', function (assert) {
   this.render(hbs`{{new-journal-entry-form}}`);
   const button = document.querySelector('.publish');
-  assert.equal(button.textContent, 'Publish');
+  assert.strictEqual(button.textContent, 'Publish');
 });
