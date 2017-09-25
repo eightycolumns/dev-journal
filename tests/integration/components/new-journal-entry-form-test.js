@@ -1,3 +1,4 @@
+import Ember from 'ember';
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
@@ -7,9 +8,7 @@ moduleForComponent('new-journal-entry-form', 'Integration | Component | new jour
 
 test('it has a title field', function (assert) {
   this.render(hbs`{{new-journal-entry-form}}`);
-  document.querySelector('#title').value = 'Journal Entry Title';
-  const titleField = document.querySelector('#title');
-  assert.equal(titleField.value, 'Journal Entry Title');
+  assert.ok(document.querySelector('#title'));
 });
 
 test('its date-picker defaults to the current date', function (assert) {
@@ -40,15 +39,30 @@ test('its date-picker defaults to the current date', function (assert) {
   assert.equal(datePicker.value, `${day} ${month} ${year}`);
 });
 
-test('it has a text field', function (assert) {
+test('its mood-picker defaults to "Happy!"', function (assert) {
   this.render(hbs`{{new-journal-entry-form}}`);
-  document.querySelector('#text').value = 'Journal entry text...';
-  const textField = document.querySelector('#text');
-  assert.equal(textField.value, 'Journal entry text...');
+  assert.ok(document.querySelector('#happy').checked);
 });
 
-test('it has a publish button', function (assert) {
+test('its mood-picker allows selection of "Meh..."', function (assert) {
   this.render(hbs`{{new-journal-entry-form}}`);
-  const publishButton = document.querySelector('#new-journal-entry button');
-  assert.equal(publishButton.textContent, 'Publish');
+  Ember.run(() => document.querySelector('#meh').click());
+  assert.ok(document.querySelector('#meh').checked);
+});
+
+test('its mood-picker allows selection of "Sad..."', function (assert) {
+  this.render(hbs`{{new-journal-entry-form}}`);
+  Ember.run(() => document.querySelector('#sad').click());
+  assert.ok(document.querySelector('#sad').checked);
+});
+
+test('it has a text field', function (assert) {
+  this.render(hbs`{{new-journal-entry-form}}`);
+  assert.ok(document.querySelector('#text'));
+});
+
+test('it has a "Publish" button', function (assert) {
+  this.render(hbs`{{new-journal-entry-form}}`);
+  const button = document.querySelector('#new-journal-entry button');
+  assert.equal(button.textContent, 'Publish');
 });

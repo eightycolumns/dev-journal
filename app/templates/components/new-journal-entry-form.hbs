@@ -1,4 +1,4 @@
-<form id='new-journal-entry' {{action 'publish' title date text on='submit'}}>
+<form id='new-journal-entry' {{action 'publish' title date mood text on='submit'}}>
   <label for='title'>Title</label>
   {{input id='title' name='title' value=title required='required'}}
 
@@ -11,6 +11,39 @@
     required='required'
     onSelection=(action 'setDate')
   }}
+
+  {{#radio-button
+    radioId='happy'
+    radioClass='mood'
+    groupValue=mood
+    value='Happy!'
+    changed='setMood'
+    required='required'
+   }}
+    Happy!
+  {{/radio-button}}
+
+  {{#radio-button
+    radioId='meh'
+    radioClass='mood'
+    groupValue=mood
+    value='Meh...'
+    changed='setMood'
+    required='required'
+   }}
+    Meh...
+  {{/radio-button}}
+
+  {{#radio-button
+    radioId='sad'
+    radioClass='mood'
+    groupValue=mood
+    value='Sad...'
+    changed='setMood'
+    required='required'
+   }}
+    Sad...
+  {{/radio-button}}
 
   <label for='text'>Text</label>
   {{textarea id='text' name='text' value=text required='required'}}

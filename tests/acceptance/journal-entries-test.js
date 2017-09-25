@@ -1,5 +1,5 @@
-import { test } from 'qunit';
 import moduleForAcceptance from 'dev-journal/tests/helpers/module-for-acceptance';
+import { test } from 'qunit';
 
 moduleForAcceptance('Acceptance | journal entries');
 

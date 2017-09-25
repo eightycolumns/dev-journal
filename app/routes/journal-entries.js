@@ -26,10 +26,30 @@ function initializeLocalStorage() {
                      'deserunt mollit anim id est laborum.';
 
   const journalEntries = [
-    {title: 'Journal Entry #1', date: '21 September 2017', text: loremIpsum},
-    {title: 'Journal Entry #2', date: '22 September 2017', text: loremIpsum},
-    {title: 'Journal Entry #3', date: '22 September 2017', text: loremIpsum},
-    {title: 'Journal Entry #4', date: '23 September 2017', text: loremIpsum}
+    {
+      title: 'Journal Entry #1',
+      date: '21 September 2017',
+      mood: 'Happy!',
+      text: loremIpsum
+    },
+    {
+      title: 'Journal Entry #2',
+      date: '22 September 2017',
+      mood: 'Happy!',
+      text: loremIpsum
+    },
+    {
+      title: 'Journal Entry #3',
+      date: '22 September 2017',
+      mood: 'Happy!',
+      text: loremIpsum
+    },
+    {
+      title: 'Journal Entry #4',
+      date: '23 September 2017',
+      mood: 'Happy!',
+      text: loremIpsum
+    }
   ];
 
   localStorage.setItem('journalEntries', JSON.stringify(journalEntries));
