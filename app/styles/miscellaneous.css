@@ -7,6 +7,10 @@ a {
   text-decoration: none;
 }
 
+nav ul {
+  list-style: none;
+}
+
 button:focus, button:hover, button:active {
   opacity: 0.5;
 }

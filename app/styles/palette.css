@@ -13,6 +13,16 @@ header, .journal-entry, form, footer {
   border-radius: 8px;
 }
 
+nav a {
+  border-bottom: 1px solid #333;
+  padding-bottom: 2px;
+}
+
+nav a:hover {
+  border-bottom: 3px solid #333;
+  padding-bottom: 1px;
+}
+
 button {
   background-color: #85c1e9;
   border: 1px solid #333;

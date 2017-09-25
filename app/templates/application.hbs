@@ -5,6 +5,21 @@
     </header>
   {{/link-to}}
 
+  <nav>
+    <ul>
+      <li>
+        {{#link-to 'journal-entries'}}
+          Journal Entries
+        {{/link-to}}
+      </li>
+      <li>
+        {{#link-to 'new-journal-entry'}}
+          New Journal Entry
+        {{/link-to}}
+      </li>
+    </ul>
+  </nav>
+
   <main>
     {{outlet}}
   </main>
