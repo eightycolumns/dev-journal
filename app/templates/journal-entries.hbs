@@ -3,7 +3,7 @@
 {{#each (sort-journal-entries model) as |journal-entry|}}
   <section class='journal-entry'>
     <h2>{{journal-entry.title}}</h2>
-    <p class='date'>{{journal-entry.date}}</p>
+    <p class='date'>{{format-date-string journal-entry.date}}</p>
     <p class='text'>{{journal-entry.text}}</p>
   </section>
 {{/each}}
