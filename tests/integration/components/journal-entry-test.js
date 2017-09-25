@@ -13,6 +13,7 @@ const journalEntry = {
 };
 
 test('it renders the header correctly', function (assert) {
+  assert.expect(2);
   this.set('journalEntry', journalEntry);
   this.render(hbs`{{journal-entry journal-entry=journalEntry}}`);
   const header = document.querySelector('.journal-entry h3');
@@ -21,6 +22,7 @@ test('it renders the header correctly', function (assert) {
 });
 
 test('it renders the date correctly', function (assert) {
+  assert.expect(2);
   this.set('journalEntry', journalEntry);
   this.render(hbs`{{journal-entry journal-entry=journalEntry}}`);
   const header = document.querySelector('.journal-entry .date');
@@ -29,6 +31,7 @@ test('it renders the date correctly', function (assert) {
 });
 
 test('it renders the mood correctly', function (assert) {
+  assert.expect(2);
   this.set('journalEntry', journalEntry);
   this.render(hbs`{{journal-entry journal-entry=journalEntry}}`);
   const header = document.querySelector('.journal-entry .mood');
@@ -37,6 +40,7 @@ test('it renders the mood correctly', function (assert) {
 });
 
 test('it renders the text correctly', function (assert) {
+  assert.expect(2);
   this.set('journalEntry', journalEntry);
   this.render(hbs`{{journal-entry journal-entry=journalEntry}}`);
   const header = document.querySelector('.journal-entry .text');
@@ -45,6 +49,7 @@ test('it renders the text correctly', function (assert) {
 });
 
 test('it has a "Delete" button', function (assert) {
+  assert.expect(2);
   this.set('journalEntry', journalEntry);
   this.render(hbs`{{journal-entry journal-entry=journalEntry}}`);
   const button = document.querySelector('.journal-entry button');
