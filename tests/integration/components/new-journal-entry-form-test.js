@@ -42,7 +42,7 @@ test('its mood-picker allows selection of "Meh..."', function (assert) {
   assert.ok(document.querySelector('#meh').checked);
 });
 
-test('its mood-picker allows selection of "Sad..."', function (assert) {
+test('its mood-picker allows selection of "Sad."', function (assert) {
   assert.expect(1);
 
   this.render(hbs`{{new-journal-entry-form}}`);

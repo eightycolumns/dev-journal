@@ -12,14 +12,6 @@ nav {
   margin: 24px 48px 0;
 }
 
-nav li {
-  display: inline-block;
-}
-
-nav li:not(:first-of-type) {
-  margin-left: 48px;
-}
-
 #not-found {
   height: 360px;
 }
@@ -27,6 +19,14 @@ nav li:not(:first-of-type) {
 footer {
   margin: 24px 0;
   padding: 24px 48px;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav li:not(:first-of-type) {
+  margin-left: 48px;
 }
 
 .date, .mood, .text, .field, #not-found p {
@@ -42,12 +42,9 @@ label[for='title'], label[for='date'], label[for='text'] {
   display: block;
 }
 
-input[type='text'], textarea {
+input[type='text'] {
   margin-top: 4px;
   padding: 4px;
-}
-
-input[type=text] {
   width: 360px;
 }
 
@@ -57,5 +54,7 @@ input[type=radio] {
 
 textarea {
   height: 180px;
+  margin-top: 4px;
+  padding: 4px;
   width: 100%;
 }
