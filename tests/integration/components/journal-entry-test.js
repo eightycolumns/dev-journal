@@ -19,7 +19,7 @@ test('it renders the header correctly', function (assert) {
 
   this.set('journalEntry', journalEntry);
   this.render(hbs`{{journal-entry journal-entry=journalEntry}}`);
-  const header = document.querySelector('.journal-entry h2');
+  const header = document.querySelector('.journal-entry h3');
 
   assert.ok(header);
   assert.strictEqual(header.textContent, 'Journal Entry Title');

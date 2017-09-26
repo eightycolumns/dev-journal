@@ -9,7 +9,7 @@ test("it's the fallback when no other routes match", function (assert) {
   visit('/foobar');
 
   andThen(() => {
-    const header = document.querySelector('#not-found h2');
+    const header = document.querySelector('#not-found h3');
     assert.strictEqual(header.textContent, '404 Not Found');
   });
 });

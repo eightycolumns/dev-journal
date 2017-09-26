@@ -35,7 +35,7 @@ test('it allows the user to delete a journal entry', assert => {
   click('.journal-entry .delete');
 
   andThen(() => {
-    const titleField = document.querySelector('.journal-entry h2');
+    const titleField = document.querySelector('.journal-entry h3');
     assert.strictEqual(titleField.textContent, 'Journal Entry Title');
 
     const textField = document.querySelector('.journal-entry .text');

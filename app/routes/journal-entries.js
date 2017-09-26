@@ -29,44 +29,34 @@ function localStorageIsInitialized() {
 }
 
 function initializeLocalStorage() {
-  const loremIpsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing ' +
-                     'elit sed do eiusmod tempor incididunt ut labore et ' +
-                     'dolore magna aliqua. Ut enim ad minim veniam, quis ' +
-                     'nostrud exercitation ullamco laboris nisi ut aliquip ' +
-                     'ex ea commodo consequat. Duis aute irure dolor in ' +
-                     'reprehenderit in voluptate velit esse cillum dolore eu ' +
-                     'fugiat nulla pariatur. Excepteur sint occaecat ' +
-                     'cupidatat non proident, sunt in culpa qui officia ' +
-                     'deserunt mollit anim id est laborum.';
-
   const journalEntries = [
     {
       id: 1,
       title: 'Journal Entry #1',
       date: '21 September 2017',
       mood: 'Happy!',
-      text: loremIpsum
+      text: 'Today I started learning Ember. It\'s described as "a framework for creating ambitious web applications", and it seems pretty neat. But you know why I\'m REALLY excited about Ember? Its mascot Tomster is a hamster, just like me! How cool is that?'
     },
     {
       id: 2,
       title: 'Journal Entry #2',
       date: '22 September 2017',
       mood: 'Happy!',
-      text: loremIpsum
+      text: 'The Ember ecosystem is kind of awesome. Ember\'s website has lots of guides and tutorials, the Ember CLI tool generates skeletal applications in seconds, and WOW there are tons of addons! It\'s no wonder people like this framework.'
     },
     {
       id: 3,
       title: 'Journal Entry #3',
       date: '22 September 2017',
-      mood: 'Happy!',
-      text: loremIpsum
+      mood: 'Meh...',
+      text: 'Learning to test Ember with QUnit has been a bit of an adjustment. In the past I\'ve always used Jasmine for JavaScript. But I think I\'m getting the hang of it. Just need more practice!'
     },
     {
       id: 4,
       title: 'Journal Entry #4',
       date: '23 September 2017',
       mood: 'Happy!',
-      text: loremIpsum
+      text: 'Yay, my app works! Pretty good for a hamster, right? Hehe, just kidding. It\'s alright, but I\'ve really only scratched the surface. It\'s been a treat getting to know Ember this week, but I still have a long way to go.'
     }
   ];
 
