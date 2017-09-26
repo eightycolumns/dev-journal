@@ -14,7 +14,7 @@ You will need the following things properly installed on your computer.
 
 ## Install
 
-* `git clone <repository-url>` this repository
+* `git clone https://github.com/eightycolumns/dev-journal.git`
 * `cd dev-journal`
 * `npm install`
 
