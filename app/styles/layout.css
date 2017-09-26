@@ -3,8 +3,8 @@
   margin: 0 auto;
 }
 
-header, .journal-entry, form, #not-found {
-  margin-top: 24px;
+header {
+  margin-top: 48px;
   padding: 48px;
 }
 
@@ -12,12 +12,17 @@ nav {
   margin: 24px 48px 0;
 }
 
+.journal-entry, form, #not-found {
+  margin-top: 24px;
+  padding: 48px;
+}
+
 #not-found {
   height: 360px;
 }
 
 footer {
-  margin: 24px 0;
+  margin: 24px 0 48px;
   padding: 24px 48px;
 }
 
