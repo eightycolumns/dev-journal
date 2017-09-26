@@ -9,7 +9,6 @@ a {
 
 header, .journal-entry, form, #not-found, footer {
   background-color: #fff;
-  border: 1px solid #333;
   border-radius: 8px;
 }
 
@@ -25,11 +24,13 @@ nav a:hover {
 
 button {
   background-color: #85c1e9;
-  border: 1px solid #333;
+  border: 0;
+  border-radius: 999px;
   color: inherit;
 }
 
-input, textarea {
+input[type='text'], textarea {
   border: 2px solid #85c1e9;
+  border-radius: 8px;
   color: inherit;
 }
