@@ -11,6 +11,7 @@
   },
   "repository": "",
   "scripts": {
+    "build-styles": "scripts/build-styles",
     "build": "ember build",
     "start": "ember server",
     "test": "ember test"
