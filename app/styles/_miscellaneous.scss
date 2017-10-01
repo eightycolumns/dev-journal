@@ -7,8 +7,10 @@ a {
   text-decoration: none;
 }
 
-nav ul {
-  list-style: none;
+nav {
+  ul {
+    list-style: none;
+  }
 }
 
 button::-moz-focus-inner {
@@ -16,10 +18,17 @@ button::-moz-focus-inner {
   padding: 0;
 }
 
-input, textarea {
-  box-shadow: none;
-}
+form {
+  input,
+  textarea {
+    box-shadow: none;
+  }
 
-input:focus, textarea:focus, button:focus, button:hover, button:active {
-  outline: none;
+  input:focus,
+  textarea:focus,
+  button:focus,
+  button:hover,
+  button:active {
+    outline: none;
+  }
 }
