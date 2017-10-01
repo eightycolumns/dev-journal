@@ -1,41 +1,49 @@
 body {
-  background-color: #85c1e9;
-  color: #333;
+  background-color: $blue;
+  color: $charcoal;
 }
 
 a {
   color: inherit;
 }
 
-header, .journal-entry, form, #not-found, footer {
+header,
+section,
+form,
+footer {
   background-color: #fff;
-  border-radius: 8px;
+  border-radius: $small;
 }
 
-nav a {
-  border-bottom: 1px solid #333;
-  padding-bottom: 2px;
-}
+nav {
+  a {
+    border-bottom: 1px solid $charcoal;
+    padding-bottom: 2px;
+  }
 
-nav a:hover {
-  border-bottom: 3px solid #333;
-  padding-bottom: 1px;
+  a:hover {
+    border-bottom: 3px solid $charcoal;
+    padding-bottom: 1px;
+  }
 }
 
 h3 {
-  border-bottom: 1px solid #85c1e9;
-  padding-bottom: 4px;
+  border-bottom: 1px solid $blue;
+  padding-bottom: $extra-small;
 }
 
 button {
-  background-color: #85c1e9;
+  background-color: $blue;
   border: 0;
   border-radius: 999px;
   color: inherit;
 }
 
-input[type='text'], textarea {
-  border: 1px solid #85c1e9;
-  border-radius: 8px;
-  color: inherit;
+form {
+  input[type='text'],
+  textarea {
+    border: 1px solid $blue;
+    border-radius: $small;
+    color: inherit;
+  }
 }
