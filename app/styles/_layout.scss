@@ -1,76 +1,93 @@
+$width: 720px;
+
+$extra-large: 48px;
+$large: 24px;
+$medium: 16px;
+$small: 8px;
+$extra-small: 4px;
+
 #application {
   margin: 0 auto;
-  width: 720px;
+  width: $width;
+}
+
+header {
+  margin-top: $extra-large;
+  padding: $extra-large;
+}
+
+nav {
+  margin-top: $large;
+
+  li {
+    display: inline-block;
+    margin-left: $extra-large;
+  }
+}
+
+section {
+  margin-top: $large;
+  padding: $extra-large;
+
+  p {
+    margin-top: $medium;
+  }
+}
+
+#not-found {
+  height: $width / 2;
+}
+
+form {
+  margin-top: $large;
+  padding: $extra-large;
+
+  .field {
+    margin-top: $medium;
+  }
+
+  label[for='title'],
+  label[for='date'],
+  label[for='text'] {
+    display: block;
+  }
+
+  input[type='text'] {
+    margin-top: $extra-small;
+    padding: $extra-small;
+    width: $width / 2;
+  }
+
+  input[type='radio'] {
+    margin-left: $small;
+  }
+
+  textarea {
+    margin-top: $extra-small;
+    padding: $extra-small;
+    width: 100%;
+    height: $width / 4;
+  }
+}
+
+footer {
+  margin: $large 0 $extra-large;
+  padding: $large $extra-large;
+}
+
+button {
+  margin-top: $large;
+  padding: $small $large;
+}
+
+// Sticky footer
+
+#application {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
 }
 
-header {
-  margin-top: 48px;
-  padding: 48px;
-}
-
-nav {
-  margin: 24px 48px 0;
-}
-
 main {
   flex: 1;
-}
-
-.journal-entry, form, #not-found {
-  margin-top: 24px;
-  padding: 48px;
-}
-
-#not-found {
-  height: 360px;
-}
-
-footer {
-  margin: 24px 0 48px;
-  padding: 24px 48px;
-}
-
-h2 {
-  margin-top: 16px;
-}
-
-nav li {
-  display: inline-block;
-}
-
-nav li:not(:first-of-type) {
-  margin-left: 48px;
-}
-
-.date, .mood, .text, .field, #not-found p {
-  margin-top: 16px;
-}
-
-button {
-  margin-top: 24px;
-  padding: 8px 24px;
-}
-
-label[for='title'], label[for='date'], label[for='text'] {
-  display: block;
-}
-
-input[type='text'] {
-  margin-top: 4px;
-  padding: 4px;
-  width: 360px;
-}
-
-input[type='radio'] {
-  margin-left: 8px;
-}
-
-textarea {
-  height: 180px;
-  margin-top: 4px;
-  padding: 4px;
-  width: 100%;
 }
