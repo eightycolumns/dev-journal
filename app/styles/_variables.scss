@@ -1,12 +1,10 @@
-$width: 720px;
-
-$extra-large: 48px;
-$large: 24px;
-$medium: 16px;
-$small: 8px;
-$extra-small: 4px;
-
-$blue: #85c1e9;
-$charcoal: #333;
-
 $font-size: 16px;
+
+$extra-large: $font-size * 3.00;
+$large:       $font-size * 1.50;
+$medium:      $font-size * 1.00;
+$small:       $font-size * 0.50;
+$extra-small: $font-size * 0.25;
+
+$blue:     #85c1e9;
+$charcoal: #333333;

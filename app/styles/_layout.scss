@@ -1,24 +1,29 @@
 #application {
   margin: 0 auto;
-  width: $width;
+  width: 100%;
+  max-width: 720px;
 }
 
 header {
-  margin-top: $extra-large;
+  margin: $extra-large $extra-large 0;
   padding: $extra-large;
 }
 
 nav {
-  margin-top: $large;
+  margin: $large $extra-large 0;
+  padding: 0 $extra-large;
 
   li {
     display: inline-block;
+  }
+
+  li:not(:first-of-type) {
     margin-left: $extra-large;
   }
 }
 
 section {
-  margin-top: $large;
+  margin: $large $extra-large 0;
   padding: $extra-large;
 
   p {
@@ -27,11 +32,11 @@ section {
 }
 
 #not-found {
-  height: $width / 2;
+  height: $extra-large * 4;
 }
 
 form {
-  margin-top: $large;
+  margin: $large $extra-large 0;
   padding: $extra-large;
 
   .field {
@@ -47,7 +52,7 @@ form {
   input[type='text'] {
     margin-top: $extra-small;
     padding: $extra-small;
-    width: $width / 2;
+    width: 50%;
   }
 
   input[type='radio'] {
@@ -58,12 +63,12 @@ form {
     margin-top: $extra-small;
     padding: $extra-small;
     width: 100%;
-    height: $width / 4;
+    height: $extra-large * 4;
   }
 }
 
 footer {
-  margin: $large 0 $extra-large;
+  margin: $large $extra-large $extra-large;
   padding: $large $extra-large;
 }
 
