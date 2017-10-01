@@ -39,6 +39,12 @@ button {
   color: inherit;
 }
 
+button:focus,
+button:hover,
+button:active {
+  background-color: scale-color($blue, $lightness: 33%);
+}
+
 form {
   input[type='text'],
   textarea {

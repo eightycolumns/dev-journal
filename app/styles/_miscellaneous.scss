@@ -11,10 +11,6 @@ nav ul {
   list-style: none;
 }
 
-button:focus, button:hover, button:active {
-  opacity: 0.66;
-}
-
 button::-moz-focus-inner {
   border: 0;
   padding: 0;
