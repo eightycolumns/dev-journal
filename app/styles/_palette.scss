@@ -1,6 +1,3 @@
-$blue:     #85c1e9;
-$charcoal: #333333;
-
 body {
   background-color: $blue;
   color: $charcoal;
@@ -15,7 +12,7 @@ section,
 form,
 footer {
   background-color: white;
-  border-radius: 0.5rem;
+  border-radius: $small;
 }
 
 nav {
@@ -32,7 +29,7 @@ nav {
 
 h3 {
   border-bottom: 1px solid $blue;
-  padding-bottom: 0.25rem;
+  padding-bottom: $x-small;
 }
 
 button {
@@ -53,7 +50,7 @@ form {
   input[type='text'],
   textarea {
     border: 1px solid $blue;
-    border-radius: 0.5rem;
+    border-radius: $small;
     color: inherit;
   }
 }

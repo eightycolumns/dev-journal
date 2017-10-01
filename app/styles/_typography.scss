@@ -5,32 +5,32 @@ html {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: $xxx-large;
   font-weight: normal;
 }
 
 h2 {
-  font-size: 1.25em;
+  font-size: $x-large;
   font-weight: normal;
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: $xx-large;
   font-weight: normal;
 }
 
 nav {
-  font-size: 1.125em;
+  font-size: $large;
 }
 
 .date,
 .mood {
-  font-size: 1.125em;
+  font-size: $large;
 }
 
 button {
   font-family: inherit;
-  font-size: 1.25em;
+  font-size: $x-large;
   line-height: inherit;
 }
 
@@ -39,7 +39,7 @@ form {
   label[for='date'],
   label[for='mood'],
   label[for='text'] {
-    font-size: 1.125em;
+    font-size: $large;
   }
 
   input,
