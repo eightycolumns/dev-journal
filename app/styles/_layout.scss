@@ -5,42 +5,42 @@
 }
 
 header {
-  margin: $extra-large $extra-large 0;
-  padding: $extra-large;
+  margin: 3rem 3rem 0;
+  padding: 3rem;
 }
 
 nav {
-  margin: $large $extra-large 0;
-  padding: 0 $extra-large;
+  margin: 1.5rem 3rem 0;
+  padding: 0 3rem;
 
   li {
     display: inline-block;
   }
 
   li:not(:first-of-type) {
-    margin-left: $extra-large;
+    margin-left: 3rem;
   }
 }
 
 section {
-  margin: $large $extra-large 0;
-  padding: $extra-large;
+  margin: 1.5rem 3rem 0;
+  padding: 3rem;
 
   p {
-    margin-top: $medium;
+    margin-top: 1rem;
   }
 }
 
 #not-found {
-  height: $extra-large * 4;
+  height: 10rem;
 }
 
 form {
-  margin: $large $extra-large 0;
-  padding: $extra-large;
+  margin: 1.5rem 3rem 0;
+  padding: 3rem;
 
   .field {
-    margin-top: $medium;
+    margin-top: 1rem;
   }
 
   label[for='title'],
@@ -50,31 +50,31 @@ form {
   }
 
   input[type='text'] {
-    margin-top: $extra-small;
-    padding: $extra-small;
+    margin-top: 0.25rem;
+    padding: 0.25rem;
     width: 50%;
   }
 
   input[type='radio'] {
-    margin-left: $small;
+    margin-left: 0.5rem;
   }
 
   textarea {
-    margin-top: $extra-small;
-    padding: $extra-small;
+    margin-top: 0.25rem;
+    padding: 0.25rem;
     width: 100%;
-    height: $extra-large * 4;
+    height: 10rem;
   }
 }
 
 footer {
-  margin: $large $extra-large $extra-large;
-  padding: $large $extra-large;
+  margin: 1.5rem 3rem 3rem;
+  padding: 1.5rem 3rem;
 }
 
 button {
-  margin-top: $large;
-  padding: $small $large;
+  margin-top: 1.5rem;
+  padding: 0.5rem 1.5rem;
 }
 
 // Sticky footer
