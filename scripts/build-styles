@@ -1,6 +1,25 @@
 #!/bin/bash
 
-readonly input=app/styles/main.scss
-readonly output=app/styles/main.css
+readonly SCSS=app/styles/main.scss
+readonly CSS=app/styles/main.css
 
-node-sass --output-style compressed "${input}" "${output}"
+main() {
+  preprocess_styles "${SCSS}" "${CSS}"
+  postprocess_styles "${CSS}" "${CSS}"
+}
+
+preprocess_styles() {
+  local -r input=$1
+  local -r output=$2
+
+  node-sass --output-style compressed "${input}" "${output}"
+}
+
+postprocess_styles() {
+  local -r input=$1
+  local -r output=$2
+
+  postcss "${input}" --use autoprefixer --output "${output}"
+}
+
+[ "${BASH_SOURCE[0]}" == "$0" ] && main "$@"
